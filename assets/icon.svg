@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2a023"/>
+      <stop offset="50%" style="stop-color:#d4881e"/>
+      <stop offset="100%" style="stop-color:#c47017"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d78e"/>
+      <stop offset="100%" style="stop-color:#e2a023"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="248" fill="url(#bg)" stroke="#2a2a4a" stroke-width="4"/>
+
+  <!-- Outer shield shape -->
+  <path d="M256 68 L400 140 L400 280 Q400 380 256 452 Q112 380 112 280 L112 140 Z"
+        fill="url(#shield)" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Inner shield outline -->
+  <path d="M256 96 L376 156 L376 272 Q376 358 256 420 Q136 358 136 272 L136 156 Z"
+        fill="none" stroke="#f5d78e" stroke-width="3" opacity="0.6"/>
+
+  <!-- Crosshair/target - horizontal -->
+  <line x1="190" y1="240" x2="322" y2="240" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <!-- Crosshair/target - vertical -->
+  <line x1="256" y1="174" x2="256" y2="306" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <!-- Crosshair circle -->
+  <circle cx="256" cy="240" r="40" fill="none" stroke="#1a1a2e" stroke-width="5" opacity="0.8"/>
+  <!-- Center dot -->
+  <circle cx="256" cy="240" r="8" fill="#1a1a2e" opacity="0.9"/>
+
+  <!-- Scan lines radiating from shield -->
+  <line x1="100" y1="180" x2="70" y2="160" stroke="#e2a023" stroke-width="2" opacity="0.4"/>
+  <line x1="100" y1="260" x2="60" y2="270" stroke="#e2a023" stroke-width="2" opacity="0.3"/>
+  <line x1="412" y1="180" x2="442" y2="160" stroke="#e2a023" stroke-width="2" opacity="0.4"/>
+  <line x1="412" y1="260" x2="452" y2="270" stroke="#e2a023" stroke-width="2" opacity="0.3"/>
+
+  <!-- Binary/data dots around shield -->
+  <circle cx="80" cy="140" r="3" fill="#e2a023" opacity="0.5"/>
+  <circle cx="95" cy="120" r="2" fill="#f5d78e" opacity="0.4"/>
+  <circle cx="432" cy="140" r="3" fill="#e2a023" opacity="0.5"/>
+  <circle cx="417" cy="120" r="2" fill="#f5d78e" opacity="0.4"/>
+  <circle cx="75" cy="340" r="2" fill="#e2a023" opacity="0.3"/>
+  <circle cx="437" cy="340" r="2" fill="#e2a023" opacity="0.3"/>
+
+  <!-- "A" letter stylized inside shield bottom -->
+  <text x="256" y="388" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900"
+        fill="url(#inner)" text-anchor="middle" letter-spacing="2" opacity="0.85">A</text>
+</svg>
