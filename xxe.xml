@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+  <!ENTITY % xxe SYSTEM "http://127.0.0.1:8080/internal/admin">
+]>
+<root>&xxe;</root>
