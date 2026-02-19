@@ -1,3 +1,5 @@
 {
-  "test_calculation": "{{ 7*7 }}"
+  "test": "{{ 7*7 }}",
+  "identity": "{{ _self }}",
+  "version": "{{ constant('Twig\\\\Environment::VERSION') }}"
 }
